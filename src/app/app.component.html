@@ -1,0 +1,25 @@
+
+<button routerLink="/">Home</button>
+
+<button routerLink="/information"> Information</button>
+<router-outlet></router-outlet> 
+
+<h1>Importants Url's</h1>
+<p>Information button contain data from API' on: https://jsonplaceholder.typicode.com/posts
+If you press this button, you will see how 'get' http request show you the title and body from it.
+</p>
+
+<form (submit) = "addUser(newUser)">
+        <input type="text" #newUser>
+        <button>Add a Link</button>
+</form>
+
+
+<ul>
+        <li *ngFor="let user of users">
+                {{ user }} <button (click)="deleteUser(user)">&#10005;</button>
+        </li>
+</ul>
+
+
+
