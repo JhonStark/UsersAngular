@@ -18,8 +18,7 @@ export class AppComponent {
    this.users.push(newUser.value);
    newUser.value = '';
    newUser.focus();
-   let users = [];
-   users.push(users);
+  
    localStorage.setItem('url', JSON.stringify(this.users));
    var valor = JSON.parse(localStorage.getItem('url'));
    
