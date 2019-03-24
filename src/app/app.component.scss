@@ -1,5 +1,126 @@
-nav{
+h1{
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: 'Germania One', cursive;
+  color :#D8DCE1;
+}
+.nav-bar{
   width: 100%;
   height: 60px;
-  background: #fff;
+  padding-left: 5%;
+  display: flex;
+
+  &__button{
+     padding: 13px;
+     align-items: center;
+     border-radius: 5px;
+     background: #42435A;
+     color: #FB9F38;
+     border: none;
+     margin-left: 10px;
+     font-size: 1.2rem;
+     &:hover{
+      color:#42435A;
+      background: #FB9F38;
+      cursor: pointer;
+     }
+  }
 }
+
+main{
+  font-size: 1.2rem;
+  padding: 5%;
+
+  .article{
+
+    &__title{
+      color: #FFA3F4;
+    }
+
+    &__paragraph{
+      text-align: justify;
+      margin-bottom: 10px;
+      &:nth-child(2) {
+        color: #ccc;
+      }
+
+      b{
+        color: #ccc;
+      }
+    }
+  }
+
+  .main-form{
+    display: flex;
+    
+    &__input{
+      width: 70%;
+      height: 30px;
+      border-radius: 5px;
+      border: none;
+      margin-right: 5px;
+      background: #2c2d3d;
+      color: #FB9F38;
+      padding-left: 5px;
+      font-size: 1.3rem;
+    }
+  
+    &__button{
+      width: 30%;
+      background: #16D391;
+      border: none;
+      color: #fff;
+      color: 1.5rem;
+      &:hover{
+        cursor: pointer;
+      }
+    }
+  }
+
+  ul{
+    counter-reset: section;  
+  }
+  .list{
+    padding-left: 5%;
+    list-style: none;
+    margin-top: 30px;
+
+    &__item{
+      font-size: 1.4rem;
+      margin-bottom: 5px;
+      &:before{
+        color: #16D391;
+        counter-increment: section;                 /* Increment the value of section counter by 1 */
+        content: counter(section); 
+      }
+
+      &--b{
+        width: 10%;
+        background: #FF5453;
+        color: #9D0009;
+        padding: 3px;
+        border: none;
+        border-radius: 10%;
+      }
+    }
+    
+ }
+
+}
+
+
+@media (min-width: 768px) and (max-width: 980px){
+  .article{
+
+    &__title{
+      margin-bottom: 30px;
+    }
+
+    &__paragraph{
+      display: none;
+    }
+  }
+
+}
+

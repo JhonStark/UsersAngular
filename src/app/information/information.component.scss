@@ -1,0 +1,23 @@
+
+.containt{
+  padding-left: 5%;
+  font-size: 1.2rem;
+  margin-top: 30px;
+
+  &__title{
+    color: #16D391;
+    font-size: 1.4rem;
+  }
+
+  &__paragraph{
+    text-align: justify;
+  }
+
+}
+
+@media (min-width: 768px){
+
+  .containt{
+    max-width: 600px;
+  }
+}

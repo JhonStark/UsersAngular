@@ -1,36 +1,39 @@
+<h1>Add Angular Krakow</h1>
+<nav class="nav-bar">
+        <button routerLink="/" class="nav-bar__button">Home</button>
 
-<nav>
-        <button routerLink="/">Home</button>
-
-        <button routerLink="/information"> Information</button>
-        <router-outlet></router-outlet> 
+        <button routerLink="/information" class="nav-bar__button"> Information</button>
+        
 </nav>
+<router-outlet></router-outlet> 
 
 
-<section>
         <main>
-                <h1>Importants Url's</h1>
-                <p>1. add an Url or Text and see behind how localStorage get the information.</p>
-                <p>2. Information button contain data from API' on: https://jsonplaceholder.typicode.com/posts
-                If you press this button, you will see how 'get' http request show you the title and body from it.
-                </p>
+                <article class="article">
+                                <h2 class="article__title">Importants Url's</h2>
+                                <p class="article__paragraph">1. add an Url or Text and see behind how localStorage get the information.</p>
+                                <p class="article__paragraph">2. Information button contain data from <b>API</b> on: https://jsonplaceholder.typicode.com/posts
+                                If you press this button, you will see how 'get' http request show you the title and body from it.
+                                </p>
+                </article>
                 
-                <form (submit) = "addUser(newUser)">
-                        <input type="text" #newUser>
-                        <button>Add a Link</button>
+                
+                <form (submit) = "addUser(newUser)" class="main-form">
+                        <input type="text" #newUser class="main-form__input" placeholder="Url or text">
+                        <button class="main-form__button">Add</button>
                 </form>
-        </main>
-</section>
+        
 
 
-<section>
-        <ul>
-                <li *ngFor="let user of users">
-                        {{ user }} <button (click)="deleteUser(user)">&#10005;</button>
+
+
+        <ul class="list">
+                <li *ngFor="let user of users" class="list__item">
+                        {{ user }} <button (click)="deleteUser(user)" class="list__item--b">&#10005;</button>
                 </li>
         </ul>
-</section>
 
+</main>
 
 
 
